@@ -1,0 +1,50 @@
+@import '../../../partials/colors';
+@import '../../../partials/media';
+
+.Successful {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  color: $font-grey;
+  background-color: rgba($color: #000000, $alpha: 0.9);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  &_Content {
+    border-radius: 20px;
+    width: 50%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 0;
+    @include respond(tab-port) {
+      padding: 4rem 2rem;
+    }
+    @include respond(mobile) {
+      width: 90%;
+      padding: 4rem 2rem;
+    }
+    h2 {
+      font-size: 4rem;
+      color: #70d87c;
+      margin-bottom: 3rem;
+      @include respond(tab-port) {
+        font-size: 2rem;
+      }
+    }
+    img {
+      width: 40rem;
+      @include respond(tab-port) {
+        display: none;
+      }
+    }
+    button {
+      width: 15rem;
+      margin-top: 3rem;
+    }
+  }
+}

@@ -1,0 +1,105 @@
+@import '../../../partials/colors';
+@import '../../../partials/media';
+
+.ChatRoom {
+  width: 75%;
+  @include respond(tab-land) {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.ChatName {
+  display: flex;
+  height: 7rem;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid rgba($color: #707070, $alpha: 0.4);
+  width: 90%;
+  margin: 0 auto;
+  h3 {
+    font-size: 2.5rem;
+    color: $primery-blue;
+    margin-left: 3rem;
+  }
+}
+
+.Btn {
+  width: 14rem;
+  height: 3.5rem;
+  font-size: 1.4rem;
+  &_Delete {
+    margin-right: 4rem;
+  }
+}
+
+.Container {
+  height: 88vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Chat {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  overflow: auto;
+}
+
+.Message {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  form {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    input {
+      width: 100%;
+      height: 3.5rem;
+      border: none;
+      border-radius: 50rem;
+      background-color: $msgInput-background;
+      padding-left: 2rem;
+      padding-right: 5rem;
+      margin-right: -3rem;
+      outline: none;
+      transition: all 0.4s ease-out;
+        &:focus {
+          transform: scale(1.01);
+          box-shadow: 0 0 2pt 1pt rgba($color: $primery-blue, $alpha: 0.5);
+        }
+    }
+    button {
+      position: relative;
+      z-index: 5;
+      display: inline-flex;
+      cursor: pointer;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      background-color: $primery-blue;
+      color: #FFFFFF;
+      padding: 0.8rem;
+      border-radius: 50%;
+      transition: all 0.4s ease-out;
+      outline: none;
+      svg {
+        transition: all 0.4s ease-out;
+        outline: none;
+      }
+      @media (hover: hover) {
+      &:hover {
+        background-color: #FFFFFF;
+        color: $font-grey;
+        box-shadow: 0 0 3pt 2pt rgba($color: $primery-blue, $alpha: 0.5);
+        svg {
+          transform: rotate(-40deg);
+        }
+      }
+    }
+    }
+  }
+}

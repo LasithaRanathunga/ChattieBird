@@ -1,0 +1,136 @@
+@import '../../../partials/colors';
+@import '../../../partials/media';
+$input-border: rgba($color: #707070, $alpha: 0.2);
+
+.Delete {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 15;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba($color: #000000, $alpha: 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Buttons {
+  display: flex;
+}
+
+.Content {
+  border-radius: 10px;
+  width: 40%;
+  padding: 2rem;
+  background-color: #ffffff;
+  color: $font-grey;
+  text-align: center;
+  @include respond(tab-port) {
+    width: 90%;
+    text-align: left;
+    padding-left: 5rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 5rem;
+  }
+
+  form {
+    position: relative;
+    label {
+      position: absolute;
+      left: 15%;
+      top: -8px;
+      font-size: 2rem;
+      transition: all 0.2s ease-out;
+      @include respond(tab-port) {
+        left: 0;
+      }
+    }
+
+    input[type='password'] {
+      border: none;
+      border-bottom: 2px solid $input-border;
+      outline: none;
+      width: 70%;
+      @include respond(tab-port) {
+        width: 80%;
+      }
+      &:valid {
+        border-bottom: 2px solid $input-border;
+        + label {
+          color: $font-grey;
+          font-size: 1.2rem;
+          transform: translateY(-1.3rem);
+        }
+      }
+      &:focus {
+        border-bottom: 2px solid $primery-blue;
+        + label {
+          color: $primery-blue;
+          font-size: 1.2rem;
+          transform: translateY(-1.3rem);
+        }
+      }
+    }
+
+    input[type='submit'] {
+      outline: none;
+      display: block;
+      font-size: 1.6rem;
+      width: 70%;
+      margin: 0 auto;
+      margin-top: 3rem;
+      height: 3rem;
+      border-radius: 10rem;
+      background-color: $error-color;
+      border: 2px solid $error-color;
+      color: $font-white;
+      cursor: pointer;
+      transition: all 0.4s ease-out;
+      @include respond(tab-port) {
+        margin: 0;
+        margin-top: 3rem;
+        width: 30%;
+        height: 4rem;
+        font-size: 2rem;
+      }
+      @media (hover: hover) {
+        &:hover {
+          background-color: $font-white;
+          color: $font-grey;
+      }
+    }
+    }
+  }
+  button {
+    outline: none;
+    font-size: 1.6rem;
+    width: 70%;
+    margin: 0 auto;
+    height: 3rem;
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    border-radius: 10rem;
+    color: $font-white;
+    background-color: #0DC21F;
+    border: 2px solid #0DC21F;
+    transition: all 0.4s ease-out;
+    @include respond(tab-port) {
+      margin: 0;
+      margin-top: 3rem;
+      width: 30%;
+      height: 4rem;
+      font-size: 2rem;
+      transform: translateX(20%);
+    }
+    @media (hover: hover) {
+      &:hover {
+        background-color: $font-white;
+        color: $font-grey;
+    }
+  }
+  }
+}

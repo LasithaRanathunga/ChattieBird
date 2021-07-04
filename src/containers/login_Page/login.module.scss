@@ -1,0 +1,156 @@
+@import '../../partials/colors';
+@import '../../partials/media';
+
+$input-border-color: rgba($color: #707070, $alpha: 0.33);
+$placeholder-color: rgba($color: #727079, $alpha: 0.33);
+
+.Login {
+  max-width: 140rem;
+  margin: 4rem auto;
+  color: $font-grey;
+  @include respond(tab-port) {
+    margin-bottom: 3rem;
+  }
+  &_Flex {
+    display: flex;
+    margin-top: 6rem;
+    @include respond(tab-port) {
+      flex-direction: column;
+    }
+    &_Image {
+      padding: 4rem 0;
+      padding-left: 10rem;
+      width: 50%;
+      @include respond(tab-port) {
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 20rem;
+        border-bottom: 2px solid $vartical-line;
+      }
+      @include respond(tab-land) {
+        margin-right: 2rem;
+      }
+      @include respond(mobile) {
+        border-bottom: 2px solid transparent;
+        padding-left: 5rem;
+      }
+      &_Header {
+        font-size: 4rem;
+        font-weight: 500;
+        @include respond(tab-land) {
+          font-size: 3rem;
+        }
+      }
+      &_Msg {
+        font-size: 2rem;
+        @include respond(tab-land) {
+          font-size: 1.6rem;
+        }
+      }
+      img {
+        margin-top: 3rem;
+        height: 35rem;
+        @include respond(tab-land) {
+          height: 25rem;
+        }
+        @include respond(tab-port) {
+          height: 35rem;
+        }
+        @include respond(mobile) {
+          display: none;
+        }
+      }
+    }
+    &_Form {
+      position: relative;
+      width: 50%;
+      text-align: center;
+      border-left: 3px solid $vartical-line;
+      @include respond(tab-land) {
+        width: 100%;
+      }
+      // @include respond(mobile) {
+      //   margin-top: 25rem;
+      // }
+      &_Header {
+        font-size: 4rem;
+        font-weight: 600;
+        margin-bottom: 4rem;
+      }
+      &_Element {
+        input {
+          width: 60%;
+          height: 4rem;
+          margin-right: -3.5rem;
+          margin-bottom: 3rem;
+          padding-left: 1.5rem;
+          border: 2px solid $input-border-color;
+          border-radius: 50rem;
+          outline: none;
+          transition: all 0.3s ease-out;
+          color: $font-grey;
+          font-size: 1.6rem;
+          cursor: pointer;
+          &:focus {
+            transform: scale(1.03);
+            margin-right: -3rem;
+          }
+          &::placeholder {
+            color: $placeholder-color;
+          }
+          &::-ms-input-placeholder {
+            color: $placeholder-color;
+          }  
+          @include respond(tab-land) {
+            width: 70%;
+          }
+        }
+        svg {
+          transform: translateY(25%);
+        }
+      }
+      &_CreateAccount {
+        display: inline-block;
+        width: 60%;
+        font-size: 1.6rem;
+        margin-top: 3rem;
+        text-align: left;
+        margin-left: 2.5rem;
+        @include respond(tab-port) {
+          margin-bottom: 3rem;
+        }
+        a {
+          text-decoration: none;
+          color: $primery-blue;
+          font-size: 2rem;
+          transition: all 0.3s ease-out;
+          &:hover,
+          &:active {
+            text-decoration: underline;
+          }
+        }
+        a:visited {
+          text-decoration: none;
+          color: $primery-blue;
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
+
+.LoginFormPosition {
+  width: 100%;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Submit {
+  width:60%;
+  margin-left: 2rem;
+  @include respond(tab-land) {
+    width: 70%;
+  }
+}

@@ -1,0 +1,89 @@
+@import '../../../../partials/colors';
+
+.Receive {
+  display: flex;
+  align-items: flex-start;
+  max-width: 70%;
+  margin-bottom: 1rem;
+  img {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+    border-radius: 50%;
+  }
+  p {
+    font-size: 1.6rem;
+    background-color: $msgReceive-background;
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    border-top-left-radius: 0;
+    overflow-wrap: break-all;
+  }
+}
+
+.Receive_Same {
+  display: flex;
+  align-items: flex-start;
+  max-width: 70%;
+  margin-left: 4rem;
+  margin-bottom: 1rem;
+  img {
+    display: none;
+  }
+  p {
+    font-size: 1.6rem;
+    background-color: $msgReceive-background;
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    overflow-wrap: break-all;
+  }
+}
+
+.Send {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  max-width: 70%;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  word-wrap: break-all;
+  white-space:normal;
+  img {
+    width: 3rem;
+    height: 3rem;
+    margin-left: 1rem;
+    border-radius: 50%;
+  }
+  p {
+    font-size: 1.6rem;
+    background-color: $msgSend-background;
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    border-top-right-radius: 0;
+    overflow-wrap: break-all;
+    white-space:normal;
+  }
+}
+
+.Send_Same {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  max-width: 70%;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: 4rem;
+  word-wrap: break-all;
+  white-space:normal;
+  img {
+    display: none;
+  }
+  p {
+    font-size: 1.6rem;
+    background-color: $msgSend-background;
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    word-wrap: break-all;
+    white-space:normal;
+  }
+}

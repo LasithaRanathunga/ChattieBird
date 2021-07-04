@@ -1,0 +1,119 @@
+@import '../../../partials/colors';
+@import '../../../partials/media';
+
+.Members_hide {
+  background-color: #EEF0F2;
+  width: 25%;
+  height: 100vh;
+  transition: all 0.4s ease-out;
+  @include respond(tab-land) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-200%);
+  }
+  .UserInfo {
+    &_UserName {
+      @include respond(mobile) {
+      display: none;
+      }
+    }
+  }
+}
+
+.Members_show {
+  background-color: #EEF0F2;
+  width: 40rem;
+  height: 100vh;
+  transition: all 0.4s ease-out;
+  @include respond(tab-land) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(0);
+  }
+}
+
+.UserInfo {
+  display: flex;
+  align-items: center;
+  margin-left: 3rem;
+  padding-top: 3rem;
+  @include respond(tab-land) {
+    padding-top: 5rem;
+    margin-left: 2rem;
+   }
+   @include respond(mobile) {
+    padding-top: 5rem;
+    margin-left: 2rem;
+   }
+  &_Dp {
+    width: 6rem;
+    border-radius: 50%;
+    @include respond(mobile) {
+     width: 5rem;
+     margin-left: 1rem;
+    }
+    @include respond(tab-land) {
+      width: 5rem;
+      margin-left: 1rem;
+     }
+  }
+  &_UserName {
+    margin-left: 3rem;
+    font-size: 2.3rem;
+    font-weight: 600;
+    color: $primery-blue;
+    @include respond(mobile) {
+      margin-left: 1rem;
+     }
+  }
+}
+
+.Search {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  input {
+    font-size: 1.6rem;
+    margin: 3rem;
+    width: 40rem;
+    height: 3.2rem;
+    border: none;
+    border-radius: 5rem;
+    padding-left: 2rem;
+    outline: none;
+    transition: all 0.4s ease-out;
+    color: $font-grey;
+    &::placeholder {
+      color: rgba($color: $font-grey, $alpha: 0.4);
+    }
+    &:focus {
+      box-shadow: 0 0 3pt 2pt rgba($color: $primery-blue, $alpha: 0.5);
+      transform: scale(1.05);
+    }
+  }
+}
+
+.Friends {
+  overflow: auto;
+  height: 70%;
+  margin-bottom: 1rem;
+  &_Friend {
+    display: flex;
+    align-items: center;
+    margin-left: 4rem;
+    margin-bottom: 3rem;
+    img {
+      height: 5rem;
+      width: 5rem;
+      margin-right: 2rem;
+      border-radius: 50%;
+    }
+    p {
+      font-size: 2rem;
+      font-weight: 500;
+      color: $primery-blue;
+    }
+  }
+}

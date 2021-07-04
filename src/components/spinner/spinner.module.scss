@@ -1,0 +1,26 @@
+@import '../../partials/colors';
+
+.Loading {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba($color: #000000, $alpha: 0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 8%;
+  }
+
+  span {
+    font-weight: 600;
+    margin-top: 3rem;
+    color: #6EADE4;
+    font-size: 4rem;
+  }
+}

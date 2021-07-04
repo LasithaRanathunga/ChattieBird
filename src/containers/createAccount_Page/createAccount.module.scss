@@ -1,0 +1,147 @@
+@import '../../partials/colors';
+@import '../../partials/media';
+$input-border: rgba($color: #707070, $alpha: 0.2);
+
+.Account {
+  margin-top: 4rem;
+  margin-left: 6rem;
+  color: $font-grey;
+  @include respond(tab-port) {
+    margin-left: 0;
+  }
+  &_Flex {
+    display: flex;
+    margin-top: 4rem;
+    @include respond(tab-port) {
+      flex-direction: column;
+    }
+    &_Photo {
+      width: 50%;
+      text-align: center;
+      @include respond(tab-port) {
+        width: 100%;
+      }
+      &_Header {
+        font-size: 3rem;
+        font-weight: 600;
+        color: $font-grey;
+      }
+      &_Img {
+        width: 30rem;
+        height: 30rem;
+        display: inline-block;
+        margin: 4rem 0;
+        background-color: rgba($color: #7E7D7D, $alpha: 0.16);
+        border: none;
+        border-radius: 50%;
+        overflow: hidden;
+        img {
+          width: 30rem;
+        }
+      }
+      &_Selector {
+        position: relative;
+        margin-top: 2rem;
+        margin-bottom: 7rem;
+        input {
+          outline: none;
+          display: none;
+        }
+        label {
+          position: absolute;
+          top: -1rem;
+          left: 20.7%;
+          width: 18rem;
+          margin-bottom: 3rem;
+          @include respond(tab-port) {
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+      }
+      &_Info {
+        width: 50rem;
+        font-size: 1.6rem;
+        margin: 0 auto;
+        text-align: left;
+        @include respond(mobile) {
+          width: 90%;
+        }
+      }
+    }
+    &_Form {
+      width: 50%;
+      border-left: 3px solid $vartical-line;
+      padding-left: 10rem;
+      padding-top: 2rem;
+      font-size: 1.6rem;
+      @include respond(tab-port) {
+        width: 90%;
+        border-left: none;
+        margin-top: 8rem;
+        padding-left: 0;
+        margin: 0 auto;
+      }
+      @include respond(mobile) {
+        width: 85%;
+        border-left: none;
+        margin-top: 8rem;
+        padding-left: 0;
+        margin: 0 auto;
+      }
+      &_Header {
+        font-size: 3rem;
+        font-weight: 500;
+        color: $font-grey;
+        margin-bottom: 0.5rem;
+      }
+      &_Elements {
+        margin-top: 4rem;
+        &_Element {
+          margin-bottom: 3rem;
+          position: relative;
+          label {
+            position: absolute;
+            left: 0;
+            font-size: 1.5rem;
+            transition: all 0.2s ease-out;
+          }
+          input {
+            border: none;
+            border-bottom: 2px solid $input-border;
+            outline: none;
+            width: 70%;
+            @include respond(mobile) {
+              width: 100%;
+            }
+            &:valid {
+              border-bottom: 2px solid $input-border;
+              + label {
+                color: $font-grey;
+                font-size: 1.2rem;
+                transform: translateY(-1.3rem);
+              }
+            }
+            &:focus {
+              border-bottom: 2px solid $primery-blue;
+              + label {
+                color: $primery-blue;
+                font-size: 1.2rem;
+                transform: translateY(-1.3rem);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.Submit {
+  width: 71%;
+  margin-top: 2rem;
+  @include respond(mobile) {
+    width: 90%;
+    margin-bottom: 3rem;
+  }
+}

@@ -1,0 +1,33 @@
+@import './partials/colors';
+
+.btn-primary {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $primery-blue;
+  border: 2px solid $primery-blue;
+  color: $font-white;
+  font-size: 2.5rem;
+  font-weight: 500;
+  height: 4rem;
+  width: 10rem;
+  border-radius: 50rem;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  outline: none;
+  &:hover {
+    background-color: #ffffff;
+    color: $font-grey;
+    border: 2px solid $font-grey;
+  }
+}
+
+.warning {
+  font-size: 1.3rem;
+  color: red;
+}
+
+.succes {
+  font-size: 1.3rem;
+  color: #0DC21F;
+}

@@ -1,0 +1,39 @@
+@import '../../partials/media';
+@import '../../partials/colors';
+
+.Chat {
+  display: flex;
+}
+
+.ShowDrawer {
+  display: none;
+    padding: 0.5rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+    z-index: 3;
+    box-shadow: 1px 1px 10px #888888;
+    @include respond(tab-land) {
+      display: block;
+    }
+}
+
+.HideDrawer {
+  display: none;
+    padding: 0.5rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+    z-index: 3;
+    transform: rotate(180deg);
+    box-shadow: 1px 1px 10px #888888;
+    @include respond(tab-land) {
+      display: block;
+    }
+}
